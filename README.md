@@ -73,7 +73,7 @@ Pilares: Foco/Prática/Grupo
 
 - Por padrão o express não começa configurado para trabalhar com JSON (api REST): ```express().use(express.json())```; o "use()" funciona como se colocasse plugins no express;
 
-## Banco de dados
+### Banco de dados
 
 - Banco não relacional na maioria das vezes se torna menos performático se usado de forma incorreta;
 
@@ -124,4 +124,67 @@ Pilares: Foco/Prática/Grupo
 - Service Pattern / Repository Pattern (Data Mapper)
 
 - CORS define quais endereços enxternos terão acesso à nossa aplicação - quais URL web terão acesso à aplicação
+
+## Dia 3
+
+- React pode ser usado para construir vários tipos de interface: web, mobile, VR, desktop; Microsoft usa no Office... 
+
+- ReactDOM: React na Web - integração com a DOM
+
+- Configurações do emmet para js: 
+```
+"emmet.syntaxProfiles": { "javascript": "jsx" },
+"emmet.includeLanguages": { "javascript": "javascriptreact"},
+```
+
+- Extensão **tsx** -> TypeScript com JSX
+
+- "Ligature fonts" (Ex.; Fira Code)
+
+- Generics dentro do TypeScript: tipo que pode receber um parâmetro; Como no Java: "< >";
+> React.FC : "Functinal Component", generic para usar componentes funcionais stateless; lembrando que componentes com estado já herdam da React.Component
+
+
+- TypeScript tem **interfaces**
+
+- o useState permite adicionar estado a um componente stateless; única função?
+> basicamente: useState recebe o valor inicial como parâmetro e retorna um array cujo primeiro elemento, índice 0, é a variável de estado e o segundo elemento uma função que modifica esse estado, setando-o ao seu argumento; usar desestruturação para receber esse retorno;
+
+- Imutabilidade gera melhorias na performance da aplicação;
+
+- A alteração de estado gera atualização de interface;
+
+- fonte roboto; Google fonts;
+
+- inserir ícones no React: pacote react-icons;
+
+- roteamento: react-router-dom;
+
+- SPA: não recarregar toda a página a cada rota;
+
+- Usar elementos semânticos do HTML
+
+- Melhor mapa: Google Map: possui um bom plano gratuíto mas ainda assim o cadastro é meio extenso; usar **leaflet** [https://leafletjs.com/](https://leafletjs.com/) ao invés dele; usar biblioteca React Leaflet também [https://react-leaflet.js.org/] (https://react-leaflet.js.org/)
+> bom desafio -> mudar o mapa para o mapa do google
+
+- Obtendo coordenadas: basta abrir o Maps e copiar da URL, o primeiro número é a latitude, o segundo a longitude, e o terceiro (seguido de um "z") é o zoom; Esses parâmetros devem ser passados como props para o <Map /> do leaflet;
+
+- TileLayer -> layout do mapa; existem gratuítos;
+
+- Instalar o axios para consumir apis; api nativa: fetch;
+> o axios permite criar configurações, inclusive uma url base para as requisições do app;
+
+- a chamada à api de items "pertence" ao componente; usar useEffect (**não** é possível usar **async/await** dentro do useEffect):
+```
+useEffect( () => {}, []); 
+// o segundo argumento diz quando a callback do primeiro deve ser chamada; passar o um array vazio diz que ela deve ser chamada uma única vez
+```
+
+- Sempre que precisar de alguma informação proveniente de dentro do componente deve-se usar *estado*; sempre que precisar armazenar tal informação em algum lugar;
+
+- "property 'title' does not exist on type 'never' " ->  *sempre que se cria um estado para um array ou objeto, é necessaio informar manualmente o tipo da variável que será armazenada* -> interfaces
+
+- Buscar estados e cidades do IBGE (ibge api);
+
+- typescript react cheat sheet -> repositório no github
 
