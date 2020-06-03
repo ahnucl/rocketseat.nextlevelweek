@@ -186,5 +186,9 @@ useEffect( () => {}, []);
 
 - Buscar estados e cidades do IBGE (ibge api);
 
-- typescript react cheat sheet -> repositório no github
+- typescript react cheat sheet -> repositório no github: [https://github.com/typescript-cheatsheets/react-typescript-cheatsheet](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet)
+
+- a passagem de referência de função sempre deve ser feita sem argumentos, pois a presenta de (...args) ao lado do nome de uma função significa a execução da mesma; passar uma arrow function nesses casos;
+
+- useHistory do react-router-dom permite navegar entre componentes sem ter botões, apenas com código
 
