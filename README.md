@@ -268,3 +268,7 @@ expo install expo-font @expo-google-fonts/ubuntu @expo-google-fonts/roboto
 
 - whatsapp: componente Linking do react-native; todo app tem deep linking (link entre apps);
 
+- **Desafio**: buscar estado e cidade na primeira tela do app a partir da api o IBGE (semelhante ao que foi feito no app web) -> instalar **react-native-picker-select**;
+
+- **Subir o backend e a aplicação pro Heroku**
+
