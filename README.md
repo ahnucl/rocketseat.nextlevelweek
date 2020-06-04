@@ -192,3 +192,79 @@ useEffect( () => {}, []);
 
 - useHistory do react-router-dom permite navegar entre componentes sem ter botões, apenas com código
 
+## Dia 4
+
+### Expo
+
+- Instalando o expo-cli: ```npm install -g expo-cli```;
+
+- O projeto mobile será criado com a cli do expo (e não com a do react native propriamente);
+
+- Metro bundler: monta o "bundle": código javascript minificado que será rodado no device;
+
+- Usei ```yarn android``` para usar o app via usb semelhente ao que seria com o react-native cli; seria possível também usar a opção *"tunnel"* para usar o celular em rede diferente da do pc;
+
+- Expo Google Fonts; da trabalho pra fazer manualmente; instalar expo-font e as fontes desejadas:
+```
+expo install expo-font @expo-google-fonts/ubuntu @expo-google-fonts/roboto
+```
+
+- Importar as fontes e importar a função "useFonts" de qualquer uma das fontes;
+
+- **Qual alternativa para o "expo/AppLoading" usar no react-native??**
+
+- o expo já tem os *ícones*;
+
+- *Constants* -> outro pacote do expo: ```expo install expo-constants```
+
+### React-native
+
+- estilizações no react-native são feitas pela propriedade "style" presente em todos os elementos;
+
+- elementos padrão: View e Text; lembrando a estrutura do android...;
+
+- ferramenta do Facebook: yoga -> converte css pra estilização nativa do Android/iOS;
+
+- no react-native, por natureza, todos os elementos são "display: flex";
+
+- **não há herança de estilos, nem cascata de estilos**; especificar uma cor num elemento não aplica a cor aos elementos aninhados a ele, por exemplo;
+
+- "fragment": div que não muda o layout; div (web) ou View (mobilo) criam um elemento em tela; o <></> (fragment) não faz isso;
+
+- insight: exportar imagens para devices em três tamanhos: original, 2x e 3x;
+
+- deu algum problema no import da imagem; foi necessário usar outra sintaxe com "require" dentro de uma propriedade do componente;
+
+- importante: designers são malucos por 8 pixels, têm até uma regra pra isso! (sarcasmo);
+
+- Componente **ImageBackgournd** do react-native é uma View que aceita uma imagem de fundo;
+
+- navegação entre rotas: libs **react-navigation**: ```yarn add @react-navigation/native```; após essa instalação, como estamos usando expo, rodar: ```expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view```; isso segundo a documentação do react-navigation, possivelmente está relacionado à versão do mesmo e ao problema que tive durante o Starter na hora de usar o react-navigation;
+
+- instalar também: ```@react-navigation/stack```; navegação em pilhas;
+
+- no mobile não tem "click", se usa "press"; onClick -> onPress;
+
+- **Todo texto no react-native precisa estar entre tags Text**;
+
+- extensão para usar mapas dentro do react-native: react-native-maps; instalar pelo ```expo install react-native-maps```;
+
+- a propriedade "borderRadius" sófunciona em elementos View;
+
+- o componente Image do react-native por padrão não entende .svg -> instalar react-native-svg
+
+- propriedade *paddingHorizontal* ajusta apenas na horizontal mas não considera a possibilidade de scroll... é possível passar esse estilo para a propriedade contentContainerStyle do ScrollView;
+
+- SafeAreaView do react-native faz o padding automaticamente do espaço da status bar e do fim da tela;
+> Não deu muito certo no meu android, resolvi não usar;
+
+- Sempre que se armazena um vetor no estado, é necessário informar qual o formato desse vetor;
+
+- instalar expo-location;
+
+- passar um objeto como segunbdo parâmetro para a função navigate seta os parâmetros de rota;
+
+- email: expo mail composer
+
+- whatsapp: componente Linking do react-native; todo app tem deep linking (link entre apps);
+
