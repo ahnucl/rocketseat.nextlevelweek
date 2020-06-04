@@ -272,3 +272,4 @@ expo install expo-font @expo-google-fonts/ubuntu @expo-google-fonts/roboto
 
 - **Subir o backend e a aplicação pro Heroku**
 
+- Tentando corrigir uma besteira
