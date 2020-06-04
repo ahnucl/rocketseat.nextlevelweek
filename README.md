@@ -23,6 +23,9 @@ Pilares: Foco/Prática/Grupo
 
 ### Notas
 
+- Observação sobre git:
+> tive um problema porque criei um submodulo sem querer. No github, esse submodulo se perde porque de fato não existia... Para remover, tive que garantir que não havia referencia ao submodulo no .gitconfig e no .gitmodules (esse arquivo nem existia...); depois foi preciso remover o submodulo da cache: ```git rm --cached mobile```; depois disso o diretório voltou a aparecer como um objeto monitorado normalmente pelo git;
+
 #### Typescript
 + Quando se usa typescript, as bibliotecas precisam de uma *descrição de tipos*; algumas bibliotecas separam essas duas dependências em pacotes diferentes; exemplo: express, sendo que a própria mensagem de alerta do TS indica como instalar a descrição de tipos do express; ``` npm intall @types/express -D`` o "-D" pode ser usado pois quando a aplicação for ao ar ela será convertida em JS puro.
 
@@ -272,4 +275,3 @@ expo install expo-font @expo-google-fonts/ubuntu @expo-google-fonts/roboto
 
 - **Subir o backend e a aplicação pro Heroku**
 
-- Tentando corrigir uma besteira
