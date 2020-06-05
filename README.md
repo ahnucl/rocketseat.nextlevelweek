@@ -306,7 +306,7 @@ expo install expo-font @expo-google-fonts/ubuntu @expo-google-fonts/roboto
 
 - Repassar informações entre níveis diferentes (pai/filho); criação de props de funções - criar interface no componente filho e receber uma função como prop; ver componente Dropzone;
 
-### Valiação:
+### Validação:
 
 - Frontend: usando "yup";
 
