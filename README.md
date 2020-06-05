@@ -319,3 +319,10 @@ expo install expo-font @expo-google-fonts/ubuntu @expo-google-fonts/roboto
 
 - errors do celebrate lida com a forma com a qual os erros são retornados ao frontend;
 
+### Outras notas
+
+- SRE: Site Reliability Engineering
+
+- Vercel - antiga Zeit
+
+- Amazon S3 e Google Cloud Storage - arquivos estáticos
