@@ -275,3 +275,47 @@ expo install expo-font @expo-google-fonts/ubuntu @expo-google-fonts/roboto
 
 - **Subir o backend e a aplicação pro Heroku**
 
+## Dia 5
+
+- Sugestões de servidores para upload no vídeo;
+
+- o servidor para hospedagem da aplicação web não precisa ser robusto como o que hospeda o backend, pois a aplicação web roda no cliente;
+
+### Upload de imagem
+
+- extensão para lidar com imagens: multer ```npm install multer```;
+
+- biblioteca crypto do node para criar hashes; forma mais "nativa";
+
+- no diskStorage do multer, a função de configuração recebe um callback cujo primeiro argumento é para tratar erros; nesse caso, é passado um ```null``` porque a chance de ter erros nas linhas anteriores é mínima; 
+
+- JSON não suporta envio de arquivos, será necessário usar outra estrutura - FormData (multi part form data);
+
+- Atenção ao tipo de retorno número/string;
+
+- opção "fileFilter" do multer: filtrar quais arquivos são permitidos no upload
+
+- Fazer serialização no PointsController
+> Serialização ou API transform;  
+
+### Mobile
+
+- biblioteca "react-dropzone";
+
+- File: global do Javascript;
+
+- Repassar informações entre níveis diferentes (pai/filho); criação de props de funções - criar interface no componente filho e receber uma função como prop; ver componente Dropzone;
+
+### Valiação:
+
+- Frontend: usando "yup";
+
+- Backend: usando "celebrate"; integra muito bem com o express; é baseado em "joi schema validation"
+> na verdade, o celebrate integra o Joi com o express; pode ser que o intellisense do joi não seja encontrado, nesse caso: ```npm install @types/hapi__joi -D```; os dois underscores representam um @ pois só pode haver um @ no nome da dependência;
+
+- **Desafio**: validar os items recebidos via RegEx (apenas números separados por vírgula);
+
+- a validação da imagem teria que ser feita pelo FileFilter no multer;
+
+- errors do celebrate lida com a forma com a qual os erros são retornados ao frontend;
+
