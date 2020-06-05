@@ -168,7 +168,7 @@ Pilares: Foco/Prática/Grupo
 - Usar elementos semânticos do HTML
 
 - Melhor mapa: Google Map: possui um bom plano gratuíto mas ainda assim o cadastro é meio extenso; usar **leaflet** [https://leafletjs.com/](https://leafletjs.com/) ao invés dele; usar biblioteca React Leaflet também [https://react-leaflet.js.org/] (https://react-leaflet.js.org/)
-> bom desafio -> mudar o mapa para o mapa do google
+> [ ] bom desafio -> mudar o mapa para o mapa do google
 
 - Obtendo coordenadas: basta abrir o Maps e copiar da URL, o primeiro número é a latitude, o segundo a longitude, e o terceiro (seguido de um "z") é o zoom; Esses parâmetros devem ser passados como props para o <Map /> do leaflet;
 
@@ -271,7 +271,7 @@ expo install expo-font @expo-google-fonts/ubuntu @expo-google-fonts/roboto
 
 - whatsapp: componente Linking do react-native; todo app tem deep linking (link entre apps);
 
-- **Desafio**: buscar estado e cidade na primeira tela do app a partir da api o IBGE (semelhante ao que foi feito no app web) -> instalar **react-native-picker-select**;
+- [ ] **Desafio**: buscar estado e cidade na primeira tela do app a partir da api o IBGE (semelhante ao que foi feito no app web) -> instalar **react-native-picker-select**;
 
 - **Subir o backend e a aplicação pro Heroku**
 
@@ -313,7 +313,7 @@ expo install expo-font @expo-google-fonts/ubuntu @expo-google-fonts/roboto
 - Backend: usando "celebrate"; integra muito bem com o express; é baseado em "joi schema validation"
 > na verdade, o celebrate integra o Joi com o express; pode ser que o intellisense do joi não seja encontrado, nesse caso: ```npm install @types/hapi__joi -D```; os dois underscores representam um @ pois só pode haver um @ no nome da dependência;
 
-- **Desafio**: validar os items recebidos via RegEx (apenas números separados por vírgula);
+- [x] **Desafio**: validar os items recebidos via RegEx (apenas números separados por vírgula);
 
 - a validação da imagem teria que ser feita pelo FileFilter no multer;
 
